@@ -5,13 +5,13 @@
 class Dots < Formula
   desc "A brew-style dotfile package manager with taps, profiles, overlays, and cross-platform support"
   homepage "https://github.com/jlrickert/dots"
-  version "0.2.0"
+  version "0.2.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jlrickert/dots/releases/download/v0.2.0/dots_0.2.0_darwin_amd64.tar.gz"
-      sha256 "3ce7526bf5c40989e85d0d926c187a855598591a3ec33e91b1c6c89e821571db"
+      url "https://github.com/jlrickert/dots/releases/download/v0.2.1/dots_0.2.1_darwin_amd64.tar.gz"
+      sha256 "678e3e72ca98d836db42635a77491872350d78fde2db5c2ec66ac399180db2d3"
 
       define_method(:install) do
         bin.install "dots"
@@ -19,8 +19,8 @@ class Dots < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jlrickert/dots/releases/download/v0.2.0/dots_0.2.0_darwin_arm64.tar.gz"
-      sha256 "19c750e6c732f31a8b4f8a8e22def77e9d902c05ef1f5c6fe19bac52883f33bc"
+      url "https://github.com/jlrickert/dots/releases/download/v0.2.1/dots_0.2.1_darwin_arm64.tar.gz"
+      sha256 "d5fb34059cb3ca38d3af63ac52ce26cbe4d302f642faf63933ec40eabade8c9f"
 
       define_method(:install) do
         bin.install "dots"
@@ -31,16 +31,16 @@ class Dots < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jlrickert/dots/releases/download/v0.2.0/dots_0.2.0_linux_amd64.tar.gz"
-      sha256 "7b45a5c9c83d1b4416070288d5d732a87d59cd6df5d6d53288e91d5d36ea6cb7"
+      url "https://github.com/jlrickert/dots/releases/download/v0.2.1/dots_0.2.1_linux_amd64.tar.gz"
+      sha256 "617f94cbb5884ee4525ecf7952425d7879468623b3fe7a69a155b90e2025ef6b"
       define_method(:install) do
         bin.install "dots"
         generate_completions_from_executable(bin/"dots", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jlrickert/dots/releases/download/v0.2.0/dots_0.2.0_linux_arm64.tar.gz"
-      sha256 "efcc2485daf6f14e2046884b10655e2ce57ba83911620c6afa44261ee8a6aa05"
+      url "https://github.com/jlrickert/dots/releases/download/v0.2.1/dots_0.2.1_linux_arm64.tar.gz"
+      sha256 "37625a723534490b065eaf2feba844d8477dd2ef7921e7feff14e5d169734363"
       define_method(:install) do
         bin.install "dots"
         generate_completions_from_executable(bin/"dots", "completion")
