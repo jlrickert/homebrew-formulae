@@ -5,13 +5,13 @@
 class Tapper < Formula
   desc "CLI toolset for managing KEGs (Knowledge Exchange Graphs)"
   homepage "https://github.com/jlrickert/tapper"
-  version "0.15.0"
+  version "0.16.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jlrickert/tapper/releases/download/v0.15.0/tap_0.15.0_darwin_amd64.tar.gz"
-      sha256 "9ad31eb4d307ef0cd5eadb7a06dd16ae8c8a8d770406ca45d741fac2de0efd12"
+      url "https://github.com/jlrickert/tapper/releases/download/v0.16.0/tap_0.16.0_darwin_amd64.tar.gz"
+      sha256 "401d816f051c19107516ed726b114e27e554f36cda7a552a4671284a6948e310"
 
       define_method(:install) do
         bin.install "tap"
@@ -19,8 +19,8 @@ class Tapper < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jlrickert/tapper/releases/download/v0.15.0/tap_0.15.0_darwin_arm64.tar.gz"
-      sha256 "5d6c481af55d685b51d3f72573bb82ac2f99152e0d40613df145dfffb3b75fa9"
+      url "https://github.com/jlrickert/tapper/releases/download/v0.16.0/tap_0.16.0_darwin_arm64.tar.gz"
+      sha256 "895a50f3c77339f9f0a9b8fdcc6b067322eaad6525482a8d3036b81591e51509"
 
       define_method(:install) do
         bin.install "tap"
@@ -31,16 +31,16 @@ class Tapper < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jlrickert/tapper/releases/download/v0.15.0/tap_0.15.0_linux_amd64.tar.gz"
-      sha256 "a48c1a6bb9b238ccf8b75f2475226087296bbbeccc9611045639085a9d4e6ec1"
+      url "https://github.com/jlrickert/tapper/releases/download/v0.16.0/tap_0.16.0_linux_amd64.tar.gz"
+      sha256 "c3bf0846c9ef0b643988b5b95a7ef2382eb5b9c265e0269847366964b058a02f"
       define_method(:install) do
         bin.install "tap"
         generate_completions_from_executable(bin/"tap", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jlrickert/tapper/releases/download/v0.15.0/tap_0.15.0_linux_arm64.tar.gz"
-      sha256 "a9689f3bad013327e390bd4951a7fa3443d5dfe406e3663e8955b73a33df8f3e"
+      url "https://github.com/jlrickert/tapper/releases/download/v0.16.0/tap_0.16.0_linux_arm64.tar.gz"
+      sha256 "5799b979412897162441954f06a29a6c30962f33362365140de4bcc67b6e1165"
       define_method(:install) do
         bin.install "tap"
         generate_completions_from_executable(bin/"tap", "completion")
