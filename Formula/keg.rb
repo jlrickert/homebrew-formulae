@@ -5,13 +5,13 @@
 class Keg < Formula
   desc "Project-focused KEG CLI with pruned command surface"
   homepage "https://github.com/jlrickert/tapper"
-  version "0.33.0"
+  version "0.34.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jlrickert/tapper/releases/download/v0.33.0/keg_0.33.0_darwin_amd64.tar.gz"
-      sha256 "f047106d884c0613cd4863e00fa151df8ed284addd6a2412c8c41ef62f85be47"
+      url "https://github.com/jlrickert/tapper/releases/download/v0.34.0/keg_0.34.0_darwin_amd64.tar.gz"
+      sha256 "c82e7b02aa264ff1e2cc07aa18db62609d93f365705f610ad2d12eb7787a8c6a"
 
       define_method(:install) do
         bin.install "keg"
@@ -19,8 +19,8 @@ class Keg < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jlrickert/tapper/releases/download/v0.33.0/keg_0.33.0_darwin_arm64.tar.gz"
-      sha256 "6e360f809fb74845ee8be2c5def1557e222afadce063dac7f9b48b49c5dd3d31"
+      url "https://github.com/jlrickert/tapper/releases/download/v0.34.0/keg_0.34.0_darwin_arm64.tar.gz"
+      sha256 "7f2a67a5e4d055af7f3b7beead72d66c34056fd799d8d42419509e1e4be5b8b0"
 
       define_method(:install) do
         bin.install "keg"
@@ -31,16 +31,16 @@ class Keg < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jlrickert/tapper/releases/download/v0.33.0/keg_0.33.0_linux_amd64.tar.gz"
-      sha256 "57d14a5beea87a7d912c1d6fc31efef625b39796f196571212dfed75a4d0510b"
+      url "https://github.com/jlrickert/tapper/releases/download/v0.34.0/keg_0.34.0_linux_amd64.tar.gz"
+      sha256 "9bf31f2d08ab7e1c238ffe9628558c4c78e8394f717174d8b311602b58026248"
       define_method(:install) do
         bin.install "keg"
         generate_completions_from_executable(bin/"keg", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jlrickert/tapper/releases/download/v0.33.0/keg_0.33.0_linux_arm64.tar.gz"
-      sha256 "7921d2f6ee419da576a67d73d59ba5fe6d083f80fd83250c4b8d134c851e092a"
+      url "https://github.com/jlrickert/tapper/releases/download/v0.34.0/keg_0.34.0_linux_arm64.tar.gz"
+      sha256 "e2ef3300bbfb82ea3d2f20e000a0ae03a5e564a7cbb70b5a9692882088068505"
       define_method(:install) do
         bin.install "keg"
         generate_completions_from_executable(bin/"keg", "completion")
